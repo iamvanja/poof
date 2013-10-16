@@ -1,0 +1,101 @@
+/*!
+ * Poof! css
+ * Version 1.0
+ * https://github.com/iamvanja/poof
+ *
+ * Copyright (c) 2013 Vanja Gavric (vanja.gavric.org)
+ * Dual licensed under the MIT and GPL licenses.
+*/
+
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+// Compass CSS3 mixins
+@import "compass/css3";
+
+// Normalize across different browsers
+@import "_normalize.scss"; 
+
+// functions
+@function determineHigher($val1, $val2) {
+    @if ($val1 > $val2) {
+        @return $val1;
+    } @else {
+        @return $val2;
+    }
+}
+@function determineLower($val1, $val2) {
+    @if ($val1 < $val2) {
+        @return $val1;
+    } @else {
+        @return $val2; 
+    }
+}
+
+// variables
+$body-bg: #27ae60;
+$clouds: #ecf0f1;
+
+// (assumed 1:1 (w:h) ratio)
+$poof-image: 'poof-48.png';
+$poof-sprite-height: image_height($poof-image);
+$poof-sprite-width: image_width($poof-image);
+$poof-size: determineLower($poof-sprite-height, $poof-sprite-width); // el's width&height
+$poof-sprite-longer: determineHigher($poof-sprite-height, $poof-sprite-width); // el's sprite width or height
+$poof-frame-count: $poof-sprite-longer / $poof-size;
+
+
+* {
+    @include box-sizing(border-box);
+}
+
+html,
+body {
+    height:100%;
+}
+body {
+    background:$body-bg;
+    border:10px solid darken($body-bg, 10%);
+}
+
+h1 {
+    text-align: center;
+    font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: $clouds;
+}
+
+.poof { 
+    cursor:default; 
+    position:absolute; 
+    height:$poof-size; 
+    width:$poof-size; 
+    background-image: image_url($poof-image);
+    background-repeat:  no-repeat;
+    background-position: 0 0;
+}
+
+.animated {
+    -webkit-animation: spriteAnimate 400ms steps($poof-frame-count) forwards;
+    -moz-animation: spriteAnimate 400ms steps($poof-frame-count) forwards;
+    -o-animation: spriteAnimate 400ms steps($poof-frame-count) forwards;
+    animation: spriteAnimate 400ms steps($poof-frame-count) forwards;
+}
+
+@-webkit-keyframes spriteAnimate {
+    from { background-position:0 0; } 
+    to { background-position:0 -#{$poof-sprite-longer}; }
+}
+@-moz-keyframes spriteAnimate {
+    from { background-position:0 0; } 
+    to { background-position:0 -#{$poof-sprite-longer}; }
+}
+@-o-keyframes spriteAnimate {
+    from { background-position:0 0; } 
+    to { background-position:0 -#{$poof-sprite-longer}; }
+}
+@keyframes spriteAnimate {
+    from { background-position:0 0; } 
+    to { background-position:0 -#{$poof-sprite-longer}; }
+}
