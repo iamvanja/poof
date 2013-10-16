@@ -64,6 +64,7 @@ h1 {
     font-weight: 300;
     font-style: normal;
     color: $clouds;
+    background: image_url($poof-image) no-repeat -9999px -9999px; // preload sprite
 }
 
 .poof { 

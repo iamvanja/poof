@@ -406,9 +406,10 @@ h1 {
   font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
   font-weight: 300;
   font-style: normal;
-  color: #ecf0f1; }
+  color: #ecf0f1;
+  background: url('../images/poof-48.png?1372376146') no-repeat -9999px -9999px; }
 
-/* line 69, scss/main.scss */
+/* line 70, scss/main.scss */
 .poof {
   cursor: default;
   position: absolute;
@@ -418,7 +419,7 @@ h1 {
   background-repeat: no-repeat;
   background-position: 0 0; }
 
-/* line 79, scss/main.scss */
+/* line 80, scss/main.scss */
 .animated {
   -webkit-animation: spriteAnimate 400ms steps(5) forwards;
   -moz-animation: spriteAnimate 400ms steps(5) forwards;
@@ -426,37 +427,37 @@ h1 {
   animation: spriteAnimate 400ms steps(5) forwards; }
 
 @-webkit-keyframes spriteAnimate {
-  /* line 87, scss/main.scss */
+  /* line 88, scss/main.scss */
   from {
     background-position: 0 0; }
 
-  /* line 88, scss/main.scss */
+  /* line 89, scss/main.scss */
   to {
     background-position: 0 -240px; } }
 
 @-moz-keyframes spriteAnimate {
-  /* line 91, scss/main.scss */
+  /* line 92, scss/main.scss */
   from {
     background-position: 0 0; }
 
-  /* line 92, scss/main.scss */
+  /* line 93, scss/main.scss */
   to {
     background-position: 0 -240px; } }
 
 @-o-keyframes spriteAnimate {
-  /* line 95, scss/main.scss */
+  /* line 96, scss/main.scss */
   from {
     background-position: 0 0; }
 
-  /* line 96, scss/main.scss */
+  /* line 97, scss/main.scss */
   to {
     background-position: 0 -240px; } }
 
 @keyframes spriteAnimate {
-  /* line 99, scss/main.scss */
+  /* line 100, scss/main.scss */
   from {
     background-position: 0 0; }
 
-  /* line 100, scss/main.scss */
+  /* line 101, scss/main.scss */
   to {
     background-position: 0 -240px; } }
