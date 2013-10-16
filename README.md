@@ -11,3 +11,4 @@ Feedback, bugs, questions? [E-mail](mailto:vanja@gavric.org) me, I'll respond qu
 ## Possible future improvement
 - modify into a plugin so that this can be used to generally animate elements using sprites, given the passed parameters (sprite image, element name, frame count, custom callback function,...)
 - not rely on Modernizr (implement only test for css animations resulting in overall smaller footprint)
+- high DPI improvements (detection, calculation, image update)
