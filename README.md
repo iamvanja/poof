@@ -6,7 +6,7 @@ Uses [Modernizr](https://github.com/Modernizr/Modernizr) to test whether the bro
 Feedback, bugs, questions? [E-mail](mailto:vanja@gavric.org) me, I'll respond quickly!
 
 ## Demo
-- Demo can be found on [link](http://vanja.gavric.org/various/poof/).
+- Demo can be found on [link](http://vanja.gavric.org/playground/poof/).
 
 ## Possible future improvement
 - modify into a plugin so that this can be used to generally animate elements using sprites, given the passed parameters (sprite image, element name, frame count, custom callback function,...)
